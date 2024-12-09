@@ -12,7 +12,9 @@ The weather app will be made where you are able to do the following:
 - On each search,  ability to see the following (how you achieve this is up to you)
 
    > Current weather at the time of the search
+   
    > A general 5 day forecast
+   
    > The ability to see max temp and min temp of the current day.
 
 - Ability to for data to persist when the user closes the browser and reopens the page
