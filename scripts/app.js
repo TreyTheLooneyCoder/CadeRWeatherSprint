@@ -1,5 +1,7 @@
 import { APIKEY } from "./environment.js";
 
+let dontCallYet = document.getElementById('dontCallYet');
+
 async function weatherCall() {
     const promise = await fetch("../https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}");
     const weather = await promise.json();
@@ -21,6 +23,8 @@ async function geoCall() {
     return geoLocate;
 }
 
-weatherCall();
-forecastCall();
-geoCall();
+dontCallYet.addEventListener('click', function(){
+    weatherCall();
+    forecastCall();
+    geoCall();
+})
