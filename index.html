@@ -1,16 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Sprint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
+  </head>
+
+  <body>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Stockton</h1>
+                </div>
+                <div class="col">
+                    <input style="width:350px; height: 56px; "class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+            </div>
+        </div>
     
+        <!-- 8 Days Ahead -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <h3>8 Day Forecast</h3>
+                </div>
+                
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Friday Dec 6</p>
+                </div>
+                <div class="col-2">
+                    <p>Clear Sky</p>
+                </div>
+                <div class="col-2">
+                    <p>18°/9°C</p>      
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Saturday Dec 7</p>
+                </div>
+                <div class="col-2">
+                    <p>Overcast Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>18°/9°C</p>  
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Sunday Dec 8</p>
+                </div>
+                <div class="col-2">
+                    <p>Overcast Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>18°/10°C</p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Monday Dec 9</p>
+                </div>
+                <div class="col-2">
+                    <p>Overcast Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>15°/8°C</p>
+                        
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Tuesday Dec 10</p>
+                </div>
+                <div class="col-2">
+                    <p>Clear Sky</p>
+                </div>
+                <div class="col-2">
+                    <p>16°/6°C</p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Wednesday Dec 11</p>
+                </div>
+                <div class="col-2">
+                    <p>Overcast Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>16°/8°C</p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Thursday Dec 12</p>
+                </div>
+                <div class="col-2">
+                    <p>Few Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>17°/7°C</p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p>Friday Dec 13</p>
+                </div>
+                <div class="col-2">
+                    <p>Broken Clouds</p>
+                </div>
+                <div class="col-2">
+                    <p>17°/7°C</p>
+                </div>
+            </div>
+        </div>
+        <!-- 8 Days Ahead End -->
+    
+        <h1 class="degrees">18°C</h1>
+    
+        <hr>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <p>1:42 PM - Friday, 6 December 2024</p>
+                </div>
+                <div class="col-6">
+                    <p>California, USA</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Main Content End -->
 
+    <!-- Weather Detail -->
+     <div class="container weather-detail"> 
+        <div class="row">
+            <div class="col">
+                <p>Weather Detail</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Humidity: 54%</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Precipitation: 0%</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Wind: 4.6MPH NE</p>
+            </div>
+        </div>
 
+        <hr>
 
+        <div class="row">
+            <div class="col">
+                <p>Hourly Forecast</p>
+            </div>
+            <div class="col">
+                <img src="./assets/HourlyForecastSS.png" alt="The hourly forecast">
+            </div>
+        </div>
+    </div>
+    <!-- Weather Detail End -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./scripts/app.js"></script>
-</body>
+  </body>
 </html>

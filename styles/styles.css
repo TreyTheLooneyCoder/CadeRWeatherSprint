@@ -1,0 +1,32 @@
+body {
+    background-image: url(../assets/WeatherSprintBg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    width: 1920px;
+}
+
+/* Main Content Start */
+.main-content {
+    grid-column: 1 / 2;
+}
+
+.days-ahead {
+    display: flex;
+    justify-content: center;
+}
+
+.degrees {
+    padding-bottom: 30%;
+}
+
+/* Main Content End */
+
+.weather-detail {
+    grid-column: 2;
+    background-color: #fffffff6;
+    border-radius: 5%;
+    padding: 0.75em;
+    width: 472px;
+}
