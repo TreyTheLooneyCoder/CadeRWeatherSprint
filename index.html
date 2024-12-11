@@ -9,14 +9,14 @@
   </head>
 
   <body>
-
+ <button id="dontCallYet" style="width: 100px; height: 100px; border-radius: 2px; border: none; grid-column: 2;"></button>
 
     <!-- Main Content -->
     <div class="main-content">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Stockton</h1>
+                    <h1 id="city-name">Stockton</h1>
                 </div>
                 <div class="col">
                     <input style="width:350px; height: 56px; "class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -28,107 +28,71 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <h3>8 Day Forecast</h3>
+                    <h3>5 Day Forecast</h3>
                 </div>
                 
             </div>
     
             <div class="row days-ahead">
                 <div class="col-2">
-                    <p>Friday Dec 6</p>
+                    <p id="day1"></p>
                 </div>
                 <div class="col-2">
-                    <p>Clear Sky</p>
+                    <p id="day1-sky"></p>
                 </div>
                 <div class="col-2">
-                    <p>18°/9°C</p>      
-                </div>
-            </div>
-    
-            <div class="row days-ahead">
-                <div class="col-2">
-                    <p>Saturday Dec 7</p>
-                </div>
-                <div class="col-2">
-                    <p>Overcast Clouds</p>
-                </div>
-                <div class="col-2">
-                    <p>18°/9°C</p>  
+                    <p id="day1-temp"></p>      
                 </div>
             </div>
     
             <div class="row days-ahead">
                 <div class="col-2">
-                    <p>Sunday Dec 8</p>
+                    <p id="day2"></p>
                 </div>
                 <div class="col-2">
-                    <p>Overcast Clouds</p>
+                    <p id="day2-sky"></p>
                 </div>
                 <div class="col-2">
-                    <p>18°/10°C</p>
+                    <p id="day2-temp"></p>  
                 </div>
             </div>
     
             <div class="row days-ahead">
                 <div class="col-2">
-                    <p>Monday Dec 9</p>
+                    <p id="day3"></p>
                 </div>
                 <div class="col-2">
-                    <p>Overcast Clouds</p>
+                    <p id="day3-sky"></p>
                 </div>
                 <div class="col-2">
-                    <p>15°/8°C</p>
+                    <p id="day3-temp"></p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col-2">
+                    <p id="day4"></p>
+                </div>
+                <div class="col-2">
+                    <p id="day4-sky"></p>
+                </div>
+                <div class="col-2">
+                    <p id="day4-temp"></p>
                         
                 </div>
             </div>
     
             <div class="row days-ahead">
                 <div class="col-2">
-                    <p>Tuesday Dec 10</p>
+                    <p id="day5"></p>
                 </div>
                 <div class="col-2">
-                    <p>Clear Sky</p>
+                    <p id="day5-sky"></p>
                 </div>
                 <div class="col-2">
-                    <p>16°/6°C</p>
+                    <p id="day5-temp"></p>
                 </div>
-            </div>
-    
-            <div class="row days-ahead">
-                <div class="col-2">
-                    <p>Wednesday Dec 11</p>
-                </div>
-                <div class="col-2">
-                    <p>Overcast Clouds</p>
-                </div>
-                <div class="col-2">
-                    <p>16°/8°C</p>
-                </div>
-            </div>
-    
-            <div class="row days-ahead">
-                <div class="col-2">
-                    <p>Thursday Dec 12</p>
-                </div>
-                <div class="col-2">
-                    <p>Few Clouds</p>
-                </div>
-                <div class="col-2">
-                    <p>17°/7°C</p>
-                </div>
-            </div>
-    
-            <div class="row days-ahead">
-                <div class="col-2">
-                    <p>Friday Dec 13</p>
-                </div>
-                <div class="col-2">
-                    <p>Broken Clouds</p>
-                </div>
-                <div class="col-2">
-                    <p>17°/7°C</p>
-                </div>
-            </div>
+            </div>          
         </div>
         <!-- 8 Days Ahead End -->
     
@@ -187,6 +151,6 @@
     <!-- Weather Detail End -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./scripts/app.js"></script>
+    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>
