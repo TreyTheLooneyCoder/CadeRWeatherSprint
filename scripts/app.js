@@ -37,20 +37,20 @@ async function forecastCall() {
 }
 
 async function geoCall() {
-    const promise = await fetch(`https://http://api.openweathermap.org/geo/1.0/direct?q=Stockton,CA,US&limit=200&appid=${APIKEY}`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=city&appid=${APIKEY}&units=imperial`);
     const geoLocate = await promise.json();
     console.log(geoLocate);
     return geoLocate;
 }
 
-dontCallYet.addEventListener('click', function(){
+dontCallYet.addEventListener('click', function() {
     weatherCall();
     forecastCall();
     geoCall();
 
-    // day1.innerText = forecast.list.main;
-    // day1Sky.innerText =
-    // day1Temp.innerText = 
+    day1.innerText = forecast.list.main;
+    day1Sky.innerText = forcast.weather.description;
+    day1Temp.innerText = forcast.list[1][0];
     // day2.innerText = forecast.list.main;
     // day2Sky.innerText =
     // day2Temp.innerText =
