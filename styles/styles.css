@@ -11,13 +11,10 @@ body {
 
 /* Main Content Start */
 .main-content {
-    grid-row: 1 / 2;
+    grid-row: 1;
 }
 
-.days-ahead {
-    grid-column: 2;
-    grid-row: 2;  
-}
+
 
 .degrees {
     padding-bottom: 32%;

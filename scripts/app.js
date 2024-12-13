@@ -1,4 +1,5 @@
 import { APIKEY } from "./environment.js";
+import { saveToLocalStorageByName, getLocalStorage, removeFromLocalStorage } from "./localstorage.js";
 
 let dontCallYet = document.getElementById('dontCallYet');
 
@@ -37,6 +38,9 @@ async function weatherCall() {
 
     mainCity.innerText = weather.name;
     mainTemp.innerText = `${weather.main.temp} °F`;
+    maxTemp.innerText = `Max - ${weather.main.temp_max} °F`;
+    minTemp.innerText = `Min - ${weather.main.temp_min} °F`;
+
     return weather;
 }
 
@@ -74,7 +78,7 @@ dontCallYet.addEventListener('click', function() {
     forecastCall();
 })
 
-searchBar.addEventListener('input', (searched) => {
+searchBar.addEventListener('input', () => {
     const searched = searchBar.value.toLowerCase();
 
     userCity.forEach(userCity => {
