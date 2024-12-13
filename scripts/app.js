@@ -2,6 +2,9 @@ import { APIKEY } from "./environment.js";
 
 let dontCallYet = document.getElementById('dontCallYet');
 
+let mainCity = document.getElementById('mainCity')
+let mainTemp = document.getElementById('mainTemp')
+
 let day1 = document.getElementById('day1');
 let day1Sky = document.getElementById('day1-sky');
 let day1Temp = document.getElementById('day1-temp');
@@ -23,21 +26,21 @@ let day5Sky = document.getElementById('day5-sky');
 let day5Temp = document.getElementById('day5-temp');
 
 async function weatherCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=121.2908&appid=${APIKEY}`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${APIKEY}`);
     const weather = await promise.json();
     console.log(weather);
     return weather;
 }
 
 async function forecastCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=37.9577&lon=121.2908&appid=${APIKEY}`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=37.9577&lon=-121.2908&appid=${APIKEY}`);
     const forecast = await promise.json();
     console.log(forecast);
     return forecast;
 }
 
 async function geoCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=city&appid=${APIKEY}&units=imperial`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Stockton&appid=${APIKEY}&units=imperial`);
     const geoLocate = await promise.json();
     console.log(geoLocate);
     return geoLocate;
@@ -48,8 +51,8 @@ dontCallYet.addEventListener('click', function() {
     forecastCall();
     geoCall();
 
-    day1.innerText = forecast.list.main;
-    day1Sky.innerText = forcast.weather.description;
+    day1.innerText = forecast.list[0];
+    day1Sky.innerText = forcast.weather;
     day1Temp.innerText = forcast.list[1][0];
     // day2.innerText = forecast.list.main;
     // day2Sky.innerText =
