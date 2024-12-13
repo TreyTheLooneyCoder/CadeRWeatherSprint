@@ -43,21 +43,26 @@ async function forecastCall() {
 
     console.log(forecast);
 
-    day1.innerText = `${forecast.list[1].dt_txt} `;
-    day1Sky.innerText = forecast.weather;
-    day1Temp.innerText = `${forecast.list[1].main} `;
-    day2.innerText = `${forecast.list[1].dt_txt} `;
-    day2Sky.innerText = forecast.weather;
-    day2Temp.innerText = `${forecast.list[1].main} `;
-    day3.innerText = `${forecast.list[1].dt_txt} `;
-    day3Sky.innerText = forecast.weather;
-    day3Temp.innerText = `${forecast.list[1].main} `;
-    day4.innerText = `${forecast.list[1].dt_txt} `;
-    day4Sky.innerText = forecast.weather;
-    day4Temp.innerText = `${forecast.list[1].main} `;
-    day5.innerText = `${forecast.list[1].dt_txt} `;
-    day5Sky.innerText = forecast.weather;
-    day5Temp.innerText =  `${forecast.list[1].main} `;
+    day1.innerText = `${forecast.list[4].dt_txt}`;
+    day1Sky.innerText = `${forecast.list[0].weather[0].description}`;
+    day1Temp.innerText = `${forecast.list[0].main.temp} °F`;
+
+    day2.innerText = `${forecast.list[12].dt_txt}`;
+    day2Sky.innerText = `${forecast.list[1].weather[0].description} `;
+    day2Temp.innerText = `${forecast.list[1].main.temp} °F`;
+
+    day3.innerText = `${forecast.list[20].dt_txt}`;
+    day3Sky.innerText = `${forecast.list[2].weather[0].description}`;
+    day3Temp.innerText = `${forecast.list[2].main.temp} °F`;
+
+    day4.innerText = `${forecast.list[28].dt_txt}`;
+    day4Sky.innerText = `${forecast.list[3].weather[0].description}`;
+    day4Temp.innerText = `${forecast.list[3].main.temp} °F`;
+
+    day5.innerText = `${forecast.list[36].dt_txt}`;
+    day5Sky.innerText = `${forecast.list[4].weather[0].description}`;
+    day5Temp.innerText =  `${forecast.list[4].main.temp} °F`;
+
     return forecast;
 }
 
@@ -65,3 +70,4 @@ dontCallYet.addEventListener('click', function() {
     weatherCall();
     forecastCall();
 })
+
