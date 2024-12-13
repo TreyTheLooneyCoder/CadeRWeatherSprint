@@ -4,6 +4,8 @@ let dontCallYet = document.getElementById('dontCallYet');
 
 let mainCity = document.getElementById('mainCity')
 let mainTemp = document.getElementById('mainTemp')
+let maxTemp = document.getElementById('maxTemp')
+let minTemp = document.getElementById('minTemp')
 
 let day1 = document.getElementById('day1');
 let day1Sky = document.getElementById('day1-sky');
@@ -26,44 +28,40 @@ let day5Sky = document.getElementById('day5-sky');
 let day5Temp = document.getElementById('day5-temp');
 
 async function weatherCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${APIKEY}`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${APIKEY}&units=imperial`);
     const weather = await promise.json();
     console.log(weather);
+
+    mainCity.innerText = weather.name;
+    mainTemp.innerText = `${weather.main.temp} °F`;
     return weather;
 }
 
 async function forecastCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=37.9577&lon=-121.2908&appid=${APIKEY}`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=37.9577&lon=-121.2908&appid=${APIKEY}&units=imperial`);    
     const forecast = await promise.json();
-    console.log(forecast);
-    return forecast;
-}
 
-async function geoCall() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Stockton&appid=${APIKEY}&units=imperial`);
-    const geoLocate = await promise.json();
-    console.log(geoLocate);
-    return geoLocate;
+    console.log(forecast);
+
+    day1.innerText = `${forecast.list[1].dt_txt} `;
+    day1Sky.innerText = forecast.weather;
+    day1Temp.innerText = `${forecast.list[1].main} `;
+    day2.innerText = `${forecast.list[1].dt_txt} `;
+    day2Sky.innerText = forecast.weather;
+    day2Temp.innerText = `${forecast.list[1].main} `;
+    day3.innerText = `${forecast.list[1].dt_txt} `;
+    day3Sky.innerText = forecast.weather;
+    day3Temp.innerText = `${forecast.list[1].main} `;
+    day4.innerText = `${forecast.list[1].dt_txt} `;
+    day4Sky.innerText = forecast.weather;
+    day4Temp.innerText = `${forecast.list[1].main} `;
+    day5.innerText = `${forecast.list[1].dt_txt} `;
+    day5Sky.innerText = forecast.weather;
+    day5Temp.innerText =  `${forecast.list[1].main} `;
+    return forecast;
 }
 
 dontCallYet.addEventListener('click', function() {
     weatherCall();
     forecastCall();
-    geoCall();
-
-    day1.innerText = forecast.list[0];
-    day1Sky.innerText = forcast.weather;
-    day1Temp.innerText = forcast.list[1][0];
-    // day2.innerText = forecast.list.main;
-    // day2Sky.innerText =
-    // day2Temp.innerText =
-    // day3.innerText = forecast.list.main;
-    // day3Sky.innerText =
-    // day3Temp.innerText =
-    // day4.innerText = forecast.list.main;
-    // day4Sky.innerText =
-    // day4Temp.innerText =
-    // day5.innerText = forecast.list.main;
-    // day5Sky.innerText =
-    // day5Temp.innerText = 
 })
