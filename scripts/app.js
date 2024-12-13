@@ -29,7 +29,7 @@ let day5Sky = document.getElementById('day5-sky');
 let day5Temp = document.getElementById('day5-temp');
 
 let searchBar = document.getElementById('searchBar')
-let userCity = document.getElementById('userCity');
+let userCity = [];
 
 async function weatherCall() {
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${APIKEY}&units=imperial`);
@@ -78,11 +78,19 @@ dontCallYet.addEventListener('click', function() {
     forecastCall();
 })
 
-searchBar.addEventListener('input', () => {
-    const searched = searchBar.value.toLowerCase();
+searchBar.addEventListener('input', function(){
+    let userInput = searchBar.value;
 
-    userCity.forEach(userCity => {
-        
-    });
-})
+    console.log(userInput);
+
+    userInput = userInput.trim().toLowerCase();
+    let favorites = [];
+        for(let i = 0; i < userCity.length; i++){
+        if(userCity[i].toLowerCase().includes(userInput)){
+            favorites.push(userCity[i]);
+        };
+    }
+    console.log(favorites);
+
+});
 
