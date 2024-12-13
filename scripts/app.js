@@ -2,10 +2,10 @@ import { APIKEY } from "./environment.js";
 
 let dontCallYet = document.getElementById('dontCallYet');
 
-let mainCity = document.getElementById('mainCity')
-let mainTemp = document.getElementById('mainTemp')
-let maxTemp = document.getElementById('maxTemp')
-let minTemp = document.getElementById('minTemp')
+let mainCity = document.getElementById('mainCity');
+let mainTemp = document.getElementById('mainTemp');
+let maxTemp = document.getElementById('maxTemp');
+let minTemp = document.getElementById('minTemp');
 
 let day1 = document.getElementById('day1');
 let day1Sky = document.getElementById('day1-sky');
@@ -26,6 +26,9 @@ let day4Temp = document.getElementById('day4-temp');
 let day5 = document.getElementById('day5');
 let day5Sky = document.getElementById('day5-sky');
 let day5Temp = document.getElementById('day5-temp');
+
+let searchBar = document.getElementById('searchBar')
+let userCity = document.getElementById('userCity');
 
 async function weatherCall() {
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${APIKEY}&units=imperial`);
@@ -69,5 +72,13 @@ async function forecastCall() {
 dontCallYet.addEventListener('click', function() {
     weatherCall();
     forecastCall();
+})
+
+searchBar.addEventListener('input', (searched) => {
+    const searched = searchBar.value.toLowerCase();
+
+    userCity.forEach(userCity => {
+        
+    });
 })
 
