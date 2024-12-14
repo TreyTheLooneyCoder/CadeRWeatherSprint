@@ -9,13 +9,11 @@
   </head>
 
   <body>
- <button id="dontCallYet" style="width: 100px; height: 100px; border-radius: 2px; border: none; grid-column: 2;"></button>
-
     <!-- Main Content -->
     <div class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-6">
                     <h1 id="mainCity">Stockton</h1>
                 </div>
                 <div class="col">
@@ -26,7 +24,7 @@
     
         <!-- 8 Days Ahead -->
         <div class="container days-forecast">
-            
+
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <h3>5 Day Forecast</h3>
@@ -35,80 +33,81 @@
             </div>
     
             <div class="row days-ahead">
-                <div class="col">
-                    <p id="day1"></p>
+                <div class="col days">
+                    <p id="day1"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day1-sky"></p>
+                <div class="col days">
+                    <p id="day1-sky"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day1-temp"></p>      
-                </div>
-            </div>
-    
-            <div class="row days-ahead">
-                <div class="col">
-                    <p id="day2"></p>
-                </div>
-                <div class="col">
-                    <p id="day2-sky"></p>
-                </div>
-                <div class="col">
-                    <p id="day2-temp"></p>  
+                <div class="col days">
+                    <p id="day1-temp"> placeholder </p>      
                 </div>
             </div>
     
             <div class="row days-ahead">
-                <div class="col">
-                    <p id="day3"></p>
+                <div class="col days">
+                    <p id="day2"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day3-sky"></p>
+                <div class="col days">
+                    <p id="day2-sky"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day3-temp"></p>
+                <div class="col days">
+                    <p id="day2-temp"> placeholder </p>  
                 </div>
             </div>
     
             <div class="row days-ahead">
-                <div class="col">
-                    <p id="day4"></p>
+                <div class="col days">
+                    <p id="day3"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day4-sky"></p>
+                <div class="col days">
+                    <p id="day3-sky"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day4-temp"></p>
+                <div class="col days">
+                    <p id="day3-temp"> placeholder </p>
+                </div>
+            </div>
+    
+            <div class="row days-ahead">
+                <div class="col days">
+                    <p id="day4"> placeholder </p>
+                </div>
+                <div class="col days">
+                    <p id="day4-sky"> placeholder </p>
+                </div>
+                <div class="col days">
+                    <p id="day4-temp"> placeholder </p>
                         
                 </div>
             </div>
     
             <div class="row days-ahead">
-                <div class="col">
-                    <p id="day5"></p>
+                <div class="col days">
+                    <p id="day5"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day5-sky"></p>
+                <div class="col days">
+                    <p id="day5-sky"> placeholder </p>
                 </div>
-                <div class="col">
-                    <p id="day5-temp"></p>
+                <div class="col days">
+                    <p id="day5-temp"> placeholder </p>
                 </div>
             </div>          
         </div>
         <!-- 8 Days Ahead End -->
 
-        <h1 id="mainTemp" class="degrees">18°C</h1>
+        <h1 style="position: absolute; left: 10px; top: 150px; font-size: 50px; font-weight: 300;" id="mainTemp" class="degrees">18°C</h1>
     
-        <p id="maxTemp" style="color: rgb(232, 231, 231);"></p>
-        <p id="minTemp" style="color: rgb(232, 231, 231);"></p>
-        <hr>
+        <p style="position: absolute; left: 10px; bottom: 140px;" id="maxTemp" style="color: rgb(232, 231, 231);"></p>
+        <p style="position: absolute; left: 10px; bottom: 120px;" id="minTemp" style="color: rgb(232, 231, 231);"></p>
+        
     
-        <div class="container">
+        <div class="container" style="position: absolute; bottom: 50px;">
+            <hr>
             <div class="row">
-                <div class="col-6">
+                <div class="col-11">
                     <p id="date">1:42 PM - Friday, 6 December 2024</p>
                 </div>
-                <div class="col-6">
+                <div class="col">
                     <p id="country">California, USA</p>
                 </div>
             </div>

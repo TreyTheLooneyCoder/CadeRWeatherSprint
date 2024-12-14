@@ -7,6 +7,8 @@ body {
     grid-template-rows: 1fr 60% 1fr;
     width: 1920px;
     color: white;
+    max-width: 1440px;
+    height: 900px;
 }
 
 /* Main Content Start */
@@ -15,18 +17,24 @@ body {
 }
 
 .days-forecast {
-    position: absolute;
-    top: 80px;
-    padding: 0%;
+   position: absolute;
+   top: 80px;
+   right: 10px;
 }
 
 .degrees {
-    padding-bottom: 32%;
+    padding-bottom: 2%;
 }
 
 .search-bar {
     width:350px; 
     height: 56px;
+    position: absolute;
+    right: 20px;
 }
 
+.days {
+    display: flex;
+    justify-content: end;
+}
 /* Main Content End */

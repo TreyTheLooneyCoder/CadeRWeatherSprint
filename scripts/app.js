@@ -1,7 +1,6 @@
 import { APIKEY } from "./environment.js";
 import { saveToLocalStorageByName, getLocalStorage, removeFromLocalStorage } from "./localstorage.js";
 
-let dontCallYet = document.getElementById('dontCallYet');
 
 let mainCity = document.getElementById('mainCity');
 let mainTemp = document.getElementById('mainTemp');
@@ -73,10 +72,8 @@ async function forecastCall() {
     return forecast;
 }
 
-dontCallYet.addEventListener('click', function() {
     weatherCall();
     forecastCall();
-})
 
 searchBar.addEventListener('input', function(){
     let userInput = searchBar.value;
